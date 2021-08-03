@@ -3,8 +3,6 @@ cd forexadel
 git remote set-url origin https://github.com/GogaSam/forexadel.git
 git status
 git checkout -b master
-touch test.txt
-echo "this is a test file" >> test.txt
 mkdir Task1
 cd Task1
 touch README.md
@@ -13,6 +11,8 @@ git add .
 git commit -m "first commit"
 git push origin master
 git checkout -b dev
+touch test.txt
+echo "this is a test file" >> test.txt
 git checkout -b GogaSam-new_feature
 echo "create-readme" > README.md
 git status

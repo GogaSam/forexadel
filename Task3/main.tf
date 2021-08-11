@@ -159,7 +159,7 @@ resource "aws_instance" "Red_Hat_web_server" {
     user_data              = file("red_hat_user_data.sh")
 #                                                                          RED_HAT!
     tags = {
-        Name    = "Amazon_Linux_server"
+        Name    = "Red_Hat_server"
         Owner   = "Goga S."
         Project = "Exadel Task 3" 
     }

@@ -9,7 +9,5 @@ cat <<EOF > /var/www/html/index.html
 </html>
 EOF
 sudo systemctl start apache2
-sudo apt-get update
-sudo apt-get install docker-ce docker-ce-cli containerdio
-sleep 80
-curl -i 10.0.1.154
+sudo apt-get update -y
+sudo apt-get install docker-ce docker-ce-cli containerdio -y

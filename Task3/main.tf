@@ -86,15 +86,6 @@ resource "aws_route_table_association" "public" {
     route_table_id = aws_route_table.public.id
 }
 
-/*resource "aws_route_table" "network_interface_route" {
-    vpc_id = aws_vpc.main.id
-
-    route {
-        cidr_block = var.network_interface_ip_cidr
-        gateway_id = aws_nat_gateway.nat_gateway.id
-    }
-}*/
-
 #                         Route Table for Private Subnet
 resource "aws_route_table" "private" {
     vpc_id = aws_vpc.main.id
@@ -111,21 +102,23 @@ resource "aws_route_table" "private" {
 }
 
 resource "aws_route_table_association" "private" {
-#                                                                  RTB ASSOCIATION PRIVATE
+#                                                                 RTB ASSOCIATION PRIVATE
     subnet_id = aws_subnet.private_subnet.id
     route_table_id = aws_route_table.private.id
 }
 
+#                   Public Key Import
 resource "aws_key_pair" "linux" {
     key_name   =  var.public_key_name
     public_key =  var.public_key
 }
 
+#                   Network Interface For Public Intance
 resource "aws_network_interface" "my_network" {
     subnet_id       = aws_subnet.public_subnet.id
     private_ips     = [var.network_interface_ip]
     security_groups = [aws_security_group.Ubuntu_security.id]
-
+#                                                                     NETWORK INTERFACE!
     tags        = {
         Name    = "Ubuntu private IP"
     }
@@ -137,7 +130,7 @@ resource "aws_instance" "Ubuntu_web_server" {
     instance_type          = var.instance_type_ubuntu
     key_name               = aws_key_pair.linux.id
     user_data              = file("ubuntu_user_data.sh")
-#                                                                         UBUNTU!
+#                                                                          UBUNTU!
     network_interface {
         network_interface_id = aws_network_interface.my_network.id
         device_index         = 0
@@ -180,7 +173,7 @@ resource "aws_security_group" "Ubuntu_security" {
             cidr_blocks = [var.internet]
         }
     }
-#                                                                       UBUNTU SG
+#                                                                          UBUNTU SG
     ingress {
         from_port   = var.icmp
         to_port     = var.icmp
@@ -215,7 +208,7 @@ resource "aws_security_group" "Red_Hat_security" {
             cidr_blocks = [var.network_interface_ip_cidr]
         }
     }
-#                                                                     RED HAT SG
+#                                                                         RED HAT SG
     ingress {
         from_port   = var.icmp
         to_port     = var.icmp

@@ -102,7 +102,7 @@ resource "aws_route_table" "private" {
 }
 
 resource "aws_route_table_association" "private" {
-#                                                                 RTB ASSOCIATION PRIVATE
+#                                                                  RTB ASSOCIATION PRIVATE
     subnet_id = aws_subnet.private_subnet.id
     route_table_id = aws_route_table.private.id
 }
@@ -124,18 +124,22 @@ resource "aws_network_interface" "my_network" {
     }
 }
 
+#                               Ami for Ubuntu
 data "aws_ami" "ubuntu_ami" {
     owners      = ["475468823417"]
     most_recent = true
+#                                                                       UBUNTU AMI
     filter {
         name   = "name"
         values = ["ubuntu ami"]
     }
 }
 
+#                               Ami for Red Hat
 data "aws_ami" "red_hat_ami" {
     owners      = ["475468823417"]
     most_recent = true
+#                                                                      RED HAT AMI
     filter {
         name   = "name"
         values = ["red hat ami"]

@@ -24,3 +24,5 @@ and the output is right!
 ![alt text](https://bucket-for-3-task-exadel.s3.eu-central-1.amazonaws.com/Capture.PNG)
 
 *also see the public server at* `http://3.127.220.36`
+
+**clone the repo and type terraform init, plan, apply and build the current infrastructure yourself!**

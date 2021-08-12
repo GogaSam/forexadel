@@ -1,8 +1,3 @@
-variable public_key {
-    type        = string
-    default     = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCIZpCdwxp8nxlBw27py+Fy+hC6bc7zw3H/eag0s8MeGoUrlnQc065svqiatlOBZEZVLbt8aLLZl4+NvZZ3LJRGMFI4caf5BLsKWjAFowGUHjfj009eVw0hzk0newlIBhH3O6pI60hNeWrAllXPs2S2pRtMhwwnr0wqXhta0GNJ2FM+5RLC46IBozSJ/1TEZz35fXwWvnCckCXLrs5ZECIhzqlOAjHaZqCSY2goIOXEaGaRBn468Lq+4QO59neDzM6xdsH5CnZ8EY8EfoTZKpxlgoARBvv+dys1VhIAz0wwawA0w9X+MaozztbQNdIq0hVQeXsclo2jXFB1lVcj2Qt3 Frankfurt"
-    description = "public key for all hosts"
-}
 
 variable owner_id {
     type        = string

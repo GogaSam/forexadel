@@ -107,12 +107,6 @@ resource "aws_route_table_association" "private" {
     route_table_id = aws_route_table.private.id
 }
 
-#                   Public Key Import
-resource "aws_key_pair" "linux" {
-    key_name   =  var.public_key_name
-    public_key =  var.public_key
-}
-
 #                   Network Interface For Public Intance
 resource "aws_network_interface" "my_network" {
     subnet_id       = aws_subnet.public_subnet.id
@@ -150,7 +144,7 @@ data "aws_ami" "red_hat_ami" {
 resource "aws_instance" "Ubuntu_web_server" {
     ami                    = data.aws_ami.ubuntu_ami.id
     instance_type          = var.instance_type_ubuntu
-    key_name               = aws_key_pair.linux.id
+    key_name               = "Frankfurt"
     user_data              = file("ubuntu_user_data.sh")
 #                                                                          UBUNTU!
     network_interface {
@@ -169,7 +163,7 @@ resource "aws_instance" "Red_Hat_web_server" {
     ami                    = data.aws_ami.red_hat_ami.id
     instance_type          = var.instance_type_red_hat
     vpc_security_group_ids = [aws_security_group.Red_Hat_security.id]
-    key_name               = aws_key_pair.linux.id
+    key_name               = "Frankfurt"
 #                                                                          RED_HAT!
     tags = {
         Name    = "Red_Hat_server"

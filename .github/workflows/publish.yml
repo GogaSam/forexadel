@@ -30,4 +30,4 @@ jobs:
         with:
           context: ./Task4/.
           push: true
-          tags: user/app:latest
+          tags: gogasamu111/exadelweb23:latest

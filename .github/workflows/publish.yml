@@ -11,6 +11,6 @@ jobs:
 
     - name: Build the Exadel Docker image
       run: |
-        echo $CR_PAT | docker login ghcr.io -u Goga364 --password-stdin
+        echo $CR_PAT | docker login ghcr.io -u GogaSam --password-stdin
       env:
         CR_PAT: ${{ secrets.FIRST_SECRET }}

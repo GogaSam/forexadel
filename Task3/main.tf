@@ -126,23 +126,23 @@ resource "aws_network_interface" "my_network" {
 
 #                               Ami for Ubuntu
 data "aws_ami" "ubuntu_ami" {
-    owners      = ["475468823417"]
+    owners      = [var.owner_id]
     most_recent = true
 #                                                                       UBUNTU AMI
     filter {
         name   = "name"
-        values = ["ubuntu ami"]
+        values = [var.ubuntu_ami]
     }
 }
 
 #                               Ami for Red Hat
 data "aws_ami" "red_hat_ami" {
-    owners      = ["475468823417"]
+    owners      = [var.owner_id]
     most_recent = true
 #                                                                      RED HAT AMI
     filter {
         name   = "name"
-        values = ["red hat ami"]
+        values = [var.red_hat_ami]
     }
 }
 

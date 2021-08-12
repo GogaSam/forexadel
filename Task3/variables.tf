@@ -14,19 +14,9 @@ variable instance_type_ubuntu {
     default     = "t2.micro"
 }
 
-variable ami_ubuntu {
-    type        = string
-    default     = "ami-05f7491af5eef733a"
-}
-
 variable instance_type_red_hat {
     type        = string
     default     = "t2.micro"
-}
-
-variable ami_red_hat {
-    type        = string
-    default     = "ami-06ec8443c2a35b0ba"
 }
 
 variable vpc_cidr_block {

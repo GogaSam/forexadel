@@ -124,9 +124,27 @@ resource "aws_network_interface" "my_network" {
     }
 }
 
+data "aws_ami" "ubuntu_ami" {
+    owners      = ["475468823417"]
+    most_recent = true
+    filter {
+        name   = "name"
+        values = ["ubuntu ami"]
+    }
+}
+
+data "aws_ami" "red_hat_ami" {
+    owners      = ["475468823417"]
+    most_recent = true
+    filter {
+        name   = "name"
+        values = ["red hat ami"]
+    }
+}
+
 #                           First instance Ubuntu!
 resource "aws_instance" "Ubuntu_web_server" {
-    ami                    = var.ami_ubuntu
+    ami                    = data.aws_ami.ubuntu_ami.id
     instance_type          = var.instance_type_ubuntu
     key_name               = aws_key_pair.linux.id
     user_data              = file("ubuntu_user_data.sh")
@@ -144,12 +162,10 @@ resource "aws_instance" "Ubuntu_web_server" {
 
 #                           Second Instance Red Hat(CentOS)!
 resource "aws_instance" "Red_Hat_web_server" {
-    ami                    = var.ami_red_hat
+    ami                    = data.aws_ami.red_hat_ami.id
     instance_type          = var.instance_type_red_hat
     vpc_security_group_ids = [aws_security_group.Red_Hat_security.id]
     key_name               = aws_key_pair.linux.id
-    subnet_id              = aws_subnet.private_subnet.id
-    user_data              = file("red_hat_user_data.sh")
 #                                                                          RED_HAT!
     tags = {
         Name    = "Red_Hat_server"

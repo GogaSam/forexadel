@@ -13,7 +13,7 @@ we have to run a hello world container which is very easy to do we just type `do
 ![alt text](https://task-4-exadel-yeah.s3.eu-central-1.amazonaws.com/part2.PNG)
 
 the extra part is to make an image with html page which says Goga Samunashvili Sandbox 2021! for that we can make our Dockerfile which  
-which will do that for us!  
+will do that for us!  
 
 ![alt text](https://task-4-exadel-yeah.s3.eu-central-1.amazonaws.com/part3.PNG)
 

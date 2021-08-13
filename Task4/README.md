@@ -27,7 +27,9 @@ for that we need to change our dockerfile. we cannot execute echo and apache com
 when we build the image **the ENV value is already stored in the built image** and it is impossible to change it, so last 2 commands must  
 be run everytime we restart container. see the configuration below
 
-![alt text](https://task-4-exadel-yeah.s3.eu-central-1.amazonaws.com/solution3.1.PNG)
+![alt text](https://task-4-exadel-yeah.s3.eu-central-1.amazonaws.com/solution3.1.PNG)  
+
+*script.sh* here
 
 ![alt text](https://task-4-exadel-yeah.s3.eu-central-1.amazonaws.com/Capture.PNG)
 

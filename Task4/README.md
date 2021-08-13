@@ -22,13 +22,17 @@ will do that for us!
 ## Part 3
 
 the parts 3.1 and 3.1.1 where done already by creating the dockerfile so going to task 3.2 which is to add an environment variable to our  
-dockerfile. and specify it in index.html
+dockerfile. and specify it in index.html so every time we restart the container with `docker run --env DEVOPS=...` must give us new value 
 
-![alt text](https://task-4-exadel-yeah.s3.eu-central-1.amazonaws.com/part5.PNG)
+![alt text](https://task-4-exadel-yeah.s3.eu-central-1.amazonaws.com/solution3.1.PNG)
 
-![alt text](https://task-4-exadel-yeah.s3.eu-central-1.amazonaws.com/part6.PNG)
+![alt text](https://task-4-exadel-yeah.s3.eu-central-1.amazonaws.com/Capture.PNG)
 
-and if the ENV will Change it will always be reflected on Web Page!
+and if we run container with another `--env DEVOPS=...` flag the ENV will change!  
+
+![alt text](https://task-4-exadel-yeah.s3.eu-central-1.amazonaws.com/done1.PNG)  
+
+![alt text](https://task-4-exadel-yeah.s3.eu-central-1.amazonaws.com/done2.PNG)
 
 ## Part 4
 

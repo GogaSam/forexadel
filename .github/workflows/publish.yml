@@ -28,6 +28,6 @@ jobs:
         name: Build and push
         uses: docker/build-push-action@v2
         with:
-          context: ./Task4/.
+          context: ./Task4/dockerfiles/apache.dockerfile
           push: true
           tags: gogasamu111/exadelweb23:latest

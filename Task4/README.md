@@ -22,7 +22,10 @@ will do that for us!
 ## Part 3
 
 the parts 3.1 and 3.1.1 where done already by creating the dockerfile so going to task 3.2 which is to add an environment variable to our  
-dockerfile. and specify it in index.html so every time we restart the container with `docker run --env DEVOPS=...` must give us new value 
+dockerfile. and specify it in index.html so every time we restart the container with `docker run --env DEVOPS=...` must give us new value.  
+for that we need to change our dockerfile. we cannot execute echo and apache commands here we must specify them in script.sh, because  
+when we build the image **the ENV value is already stored in the built image** and it is impossible to change it, so last 2 commands must  
+be run everytime we restart container. see the configuration below
 
 ![alt text](https://task-4-exadel-yeah.s3.eu-central-1.amazonaws.com/solution3.1.PNG)
 

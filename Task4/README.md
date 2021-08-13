@@ -45,7 +45,7 @@ we must push our image to this repo, and write the following github acctions pip
 ## Part 5
 
 the last part is that we have docker-compose file with 3 images and 8 contaners (one image should run 5 nodes) so here is the compose  
-file we are going to use
+file we are going to use. and we are going to run command `docker-compose up --scale apache=5 -d`
 
 ![alt text](https://task-4-exadel-yeah.s3.eu-central-1.amazonaws.com/part9.PNG)
 

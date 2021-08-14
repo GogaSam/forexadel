@@ -6,7 +6,8 @@ to run on startup. the following script installs docker and docker-compose.
 ![alt text](https://task-4-exadel-yeah.s3.eu-central-1.amazonaws.com/part1.PNG)
 
 ## Part 2 
-we have to run a hello world container which is very easy to do we just type `docker run hello-world` and docker works fine. 
+we have to ssh into our machine and run a hello world container, it is very easy to do we just type `docker run hello-world`  
+in our secure shell and docker works fine. 
 
 ![alt text](https://task-4-exadel-yeah.s3.eu-central-1.amazonaws.com/part2.PNG)
 

@@ -22,7 +22,7 @@ will do that for us!
 
 the parts 3.1 and 3.1.1 where done already by creating the dockerfile, so going to task 3.2 which is to add an environment variable, to our  
 dockerfile, and specify it in index.html. every time we restart the container with `docker run --env DEVOPS=...` command must give us  
-new value if we specify it in `--env`. for that to be possible we need to change our dockerfile. we cannot execute echo and apache  
+new value if we specify it in `--env`. for that to be possible we need to change our dockerfile. we cannot execute echo and apache start  
 commands in dockerfile. we must specify them in **script.sh**, because when we build our image **the ENV value is already stored in the built  
 image** and it is impossible to change it, so last 2 commands must run everytime we restart container. see the configuration below
 

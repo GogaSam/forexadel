@@ -1,5 +1,3 @@
-# TASK 4  
-
 ## Part 1  
 firts part was to install docker (extra - to do it with script) what we can do is to create an EC2 instance on AWS (or any cloud provider you  
 use) and type the following script in user data of the instance. note that user data is a text bar where you can store your SH scripts for EC2  

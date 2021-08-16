@@ -1,0 +1,9 @@
+---
+
+ - name: checkhealth
+   hosts: all
+   become: yes
+
+   tasks:
+   - name: ping servers for health check
+     ping:

@@ -31,3 +31,39 @@ now we need to write a playbook (an instruction file for ansible) which will ins
 
 ![alt text](https://task5-new-bucket-lol.s3.eu-central-1.amazonaws.com/part6.PNG)
 
+## Task 5 (Extra part Task)  
+
+For extra one we ave to write a playbook which installs docker and docker-compose (I used docker-compose) and run it with ansible, and  
+also 2 containers must run on remote servers one will be wordpress and another one mySQL db container here is the compose file.  
+_for playbook see ubuntu.yml in my git repo_
+  
+![alt text](https://task5-new-bucket-lol.s3.eu-central-1.amazonaws.com/part7.PNG)
+
+![alt text](https://task5-new-bucket-lol.s3.eu-central-1.amazonaws.com/part9.PNG)
+
+extra part 2 says that we have to encrypt our credentials. in my instance it is .envwordpress and .envmysql which are used in docker-  
+compose we encrypt them using `ansible-vault encrypt` command.  
+
+![alt text](https://task5-new-bucket-lol.s3.eu-central-1.amazonaws.com/part8.PNG)
+
+part 3 extra: we need to make a dynamic inventory in ansible. for example if we have auto scaling group and our servers are being scaled  
+often It would be hard for us to keep track of all servers, in ansible. here comes the dynamic inventory which will automatically add  
+or delete servers in our dynamic inventory. __https://docs.ansible.com/ansible/latest/collections/amazon/aws/aws_ec2_inventory.html  
+I recommend having a look at documentation__. we need to install aws ec2 plugin with ansible galaxy (ansible-galaxy collection install  
+amazon.aws) install pip __https://pip.pypa.io/en/stable/installation/__ or any other version you need to use. after dealing with pip  
+install __boto3__ with `pip install boto3`, install botocore (if not installed automatically) create AWS IAM Role or User. I will go with  
+creating Role for EC2 isntance  
+
+![alt text](https://task5-new-bucket-lol.s3.eu-central-1.amazonaws.com/part10.PNG)  
+
+attach IAM Role to EC2 control plane  
+
+![alt text](https://task5-new-bucket-lol.s3.eu-central-1.amazonaws.com/part11.PNG)  
+
+next we will SSH in to our control plane and create __aws_ec2.yml__ the file can be very complex but for the example i will just use  
+this config. and it will display all instances in Frankfurt AWS Region.  
+
+![alt text](https://task5-new-bucket-lol.s3.eu-central-1.amazonaws.com/part12.PNG)
+
+Thank you for your attention have a nice day
+_for public server view 18.157.181.212:8000 & 18.193.48.166:8000_

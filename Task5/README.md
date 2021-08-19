@@ -63,7 +63,11 @@ attach IAM Role to EC2 control plane
 next we will SSH in to our control plane and create __aws_ec2.yml__ the file can be very complex but for the example i will just use  
 this config. and it will display all instances in Frankfurt AWS Region.  
 
-![alt text](https://task5-new-bucket-lol.s3.eu-central-1.amazonaws.com/part12.PNG)
+![alt text](https://task5-new-bucket-lol.s3.eu-central-1.amazonaws.com/part12.PNG)  
+
+also lets ping our hosts.  
+
+![alt text](https://task5-new-bucket-lol.s3.eu-central-1.amazonaws.com/part13.PNG)
 
 Thank you for your attention have a nice day
 _for public server view 18.157.181.212:8000 & 18.193.48.166:8000_

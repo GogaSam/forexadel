@@ -49,31 +49,32 @@ save the configuration and you are good to go! I will complete the exact same pr
 __Docker Node #1__
 ![alt text](https://s3.eu-central-1.amazonaws.com/tas6.completed.forever/part7.1.PNG)  
 __Docker Node #2__
-![alt text](https://s3.eu-central-1.amazonaws.com/tas6.completed.forever/part7.1.PNG)  
+![alt text](https://s3.eu-central-1.amazonaws.com/tas6.completed.forever/part7.2.PNG)  
 ## Part 4  
 
 we need to install Plugin called Build timestamp which will show our current time (Georgia/Tbilisi) Which is GMT+4. after intsalling the  
 Pluggin we go to configure system and choose the following options  
 
-![alt text](https://s3.eu-central-1.amazonaws.com/tas6.completed.forever/part8.PNG)  
+![alt text](https://s3.eu-central-1.amazonaws.com/tas6.completed.forever/Part8.PNG)  
 
 Create a Freestyle project. Which will show the current date as a result of execution. we create the job (New Item -> Freestyle Project)  
 then under label expressions choose the docker agent label.  
 
-![alt text](https://s3.eu-central-1.amazonaws.com/tas6.completed.forever/part9.PNG)  
+![alt text](https://s3.eu-central-1.amazonaws.com/tas6.completed.forever/Part9.PNG)  
 __the name was changed from slave to agent__
 
 select execute shell and type the following command  
 
-![alt text](https://s3.eu-central-1.amazonaws.com/tas6.completed.forever/part10.PNG)  
+![alt text](https://s3.eu-central-1.amazonaws.com/tas6.completed.forever/Part10.PNG)  
 
 ## Part 5 
 
-Next we create Task-5 pipeline. and make agent-2 do the task. but untill executing the docker ps -a there are some things to do. first we go  
-to Manage Jenkins ->  Manage Nodes and Clouds -> Configure Clouds and edit docker agent template and add the following line in container  
-settings tab `type=bind,source=/var/run/docker.sock,destination=/var/run/docker.sock,` this will bind mount our docker agents local docker  
-engine to the docker engine in our container. SSH into docker agent and execute command `sudo chmod 777 /var/run/docker.sock` to not get  
-permission errors in the pipeline. go to pipeline in jenkins and add the following command in script.  
+Next we create Task-5 pipeline. and make agent-2 do the task. but untill executing the docker ps -a there are some things to do.  
+first we go to Manage Jenkins ->  Manage Nodes and Clouds -> Configure Clouds and edit docker agent template and add the following  
+line in container settings tab `type=bind,source=/var/run/docker.sock,destination=/var/run/docker.sock,` this will bind mount our  
+docker agents local docker engine to the docker engine in our container. SSH into docker agent and execute command  
+`sudo chmod 777 /var/run/docker.sock` to not get permission errors in the pipeline. go to pipeline in jenkins and add the  
+following command in script.  
 
 ![alt text](https://s3.eu-central-1.amazonaws.com/tas6.completed.forever/part12.PNG)  
 ![alt text](https://s3.eu-central-1.amazonaws.com/tas6.completed.forever/part13.PNG)  

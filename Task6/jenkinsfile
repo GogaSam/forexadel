@@ -1,0 +1,36 @@
+pipeline {
+    agent { label 'docker-agent-2' }
+    
+    environment {
+        PASSWORD = credentials('PASSWORD')
+    }
+    
+    stages {
+        stage('Docker Test') {
+            steps {
+                sh 'whoami'
+                sh 'ls -la /var/run/docker.sock'
+                sh 'docker ps -a'
+            }
+        }
+        stage('Git Clone') {
+            steps {
+                sh 'git clone https://github.com/GogaSam/forexadel.git'
+                sh 'ls -l forexadel/Task4/dockerfiles'
+            }
+        }
+        stage('Build Dockerfile') {
+            steps {
+                sh 'cp forexadel/Task4/dockerfiles/script.sh .'
+                sh 'docker build -t gogasamu111/exadelweb23 -f forexadel/Task4/dockerfiles/apache.dockerfile .'
+            }
+            
+        }
+        stage('Run Container') {
+            steps {
+                sh 'docker run -d -e PASSWORD=${PASSWORD} gogasamu111/exadelweb23'
+            }
+            
+        }
+    }
+}

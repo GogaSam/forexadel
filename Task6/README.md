@@ -66,6 +66,7 @@ __the name was changed from slave to agent__
 select execute shell and type the following command  
 
 ![alt text](https://s3.eu-central-1.amazonaws.com/tas6.completed.forever/Part10.PNG)  
+![alt text](https://s3.eu-central-1.amazonaws.com/tas6.completed.forever/part11.PNG)
 
 ## Part 5 
 

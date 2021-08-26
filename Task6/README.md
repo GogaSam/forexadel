@@ -74,8 +74,8 @@ select execute shell and type the following command
 
 Next we create Task-5 pipeline. and make agent-2 do the task. but untill executing the docker ps -a there are some things to do.  
 first we go to Manage Jenkins ->  Manage Nodes and Clouds -> Configure Clouds and edit docker agent template and add the following  
-line in container settings tab  -> Mounts`type=bind,source=/var/run/docker.sock,destination=/var/run/docker.sock,` this will bind  
-mount our docker agents local docker engine to the docker engine in our container. SSH into docker agent and execute command  
+line in container settings tab  -> Mounts -> `type=bind,source=/var/run/docker.sock,destination=/var/run/docker.sock,` this will  
+bind mount our docker agents local docker engine to the docker engine in our container. SSH into docker agent and execute command  
 `sudo chmod 777 /var/run/docker.sock` to not get permission errors in the pipeline. go to pipeline in jenkins and add the  
 following command in script.  
 

@@ -38,11 +38,12 @@ and click test connection. it should show you the version of the API and docker 
 ![alt text](https://s3.eu-central-1.amazonaws.com/tas6.completed.forever/part6.PNG)  
 
 then click Docker Agent Templates -> Add Docker Template. Add Label, for example docker-agent-1. Under Docker images  
-type the image you want to use (Jenkins and java must beinstalled on the image you will use) I will be using  
-gogasamu111/jenkins-docker-test image for this setup. because it already has everything i need. for this image set up  
-/home/jenkins as root directory under root directory tab. under connect method choose connect with ssh. Select  
-connect with SSh and under SSH key select Use configured ssh credentials and add credentials (For this  
-image password is jenkins and username is jenkins) for host key verificication select Non verifying Verification Strategy.  
+type the image you want to use (Jenkins and java must be installed on the image you will use) I will be using  
+gogasamu111/jenkins-docker-test image for this setup. because it already has everything i need. if you don't have  
+already built you own image I would recommend using this one. for this image set up /home/jenkins as root directory  
+under root directory tab. under connect method choose connect with ssh. Select connect with SSh and under SSH key  
+select Use configured ssh credentials and add credentials, Username and Password(For this image password is jenkins  
+and username is jenkins) for host key verificication select Non verifying Verification Strategy.  
 
 ![alt text](https://s3.eu-central-1.amazonaws.com/tas6.completed.forever/Screenshot+2021-08-24+213346.png)  
 

@@ -17,7 +17,7 @@ part 2 is to Install necessary plugins I choosed to install the recommended plug
 ## Part 3  
 
 We need to add docker agents for our jenkins master I will have two ubuntu servers with same configuration. ssh in to servers and add the  
-following line in __/lib/systemd/system/docker.service__  
+following line in __/lib/systemd/system/docker.service__ (Use sudo to not get permission errors)  
 
 ![alt text](https://s3.eu-central-1.amazonaws.com/tas6.completed.forever/part3.PNG)  
 _don't forget to comment out ExecStart=/usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock_  

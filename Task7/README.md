@@ -95,10 +95,10 @@ Let's create our own dashboard go to Dashboards -> create new dashboard. I will 
 
 go to http://(IP):3000 and log in to grafana. go to Configuration -> Data Sources -> Add data source. and make configuration similar to this. then press save and test  
 
-![alt text](https://s3.eu-central-1.amazonaws.com/task7.boi.done.yea/Part25.PNG)  
+![alt text](https://s3.eu-central-1.amazonaws.com/task7.boi.done.yea/Part26.PNG)  
 
-![alt text](https://s3.eu-central-1.amazonaws.com/task7.boi.done.yea/Part25.PNG)   
+![alt text](https://s3.eu-central-1.amazonaws.com/task7.boi.done.yea/Part27.PNG)   
 
-![alt text](https://s3.eu-central-1.amazonaws.com/task7.boi.done.yea/Part25.PNG)  
+![alt text](https://s3.eu-central-1.amazonaws.com/task7.boi.done.yea/Part28.PNG)  
 
 thank yoou for your attention. have a nice day, or evening.

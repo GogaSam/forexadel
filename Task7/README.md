@@ -18,7 +18,7 @@ This file has a lot of stuff we will update only one thing, however, this is the
 ![alt text](https://s3.eu-central-1.amazonaws.com/task7.boi.done.yea/Part4.PNG)  
 __after updating use following keys on your keyboard to save the file CTRL + S, CRTL + X__  
 
-Next we will configure PHP for Zabbix frontend. We will edit __/etc/zabbix/apache.conf__ file to update the timezone (`sudo nano  /etc/zabbix/apache.conf`). In my case it will be Etc/GMT-4 (Because of PHP syntax). I will type in version 7 php block. you can find your own timezone [here](https://www.php.net/manual/en/timezones.php) https://www.php.net/manual/en/timezones.php)  
+Next we will configure PHP for Zabbix frontend. We will edit __/etc/zabbix/apache.conf__ file to update the timezone (`sudo nano  /etc/zabbix/apache.conf`). In my case it will be Etc/GMT-4 (Because of PHP syntax). I will type in version 7 php block. you can find your own timezone [here](https://www.php.net/manual/en/timezones.php)   
 
 ![alt text](https://s3.eu-central-1.amazonaws.com/task7.boi.done.yea/Part5.PNG)  
 __after updating use following keys on your keyboard to save the file CTRL + S, CRTL + X__  

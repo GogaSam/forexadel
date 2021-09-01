@@ -1,5 +1,5 @@
 ## Part 1 (Zabbix)  
-first we install Zabbix on our servers type command - `sudo apt update && sudo apt upgrade` to update our dependencies (Ubuntu) then insrtall zabbix using command -  `wget https://repo.zabbix.com/zabbix/5.0/ubuntu/pool/main/z/zabbix-release/zabbix-release_5.0-1+focal_all.deb` then dpkg it - `dpkg -i zabbix-release_5.0-1+focal_all.deb` and `sudo apt update && sudo apt upgrade` once more now we will install Zabbix server, frontend, agent, and database. `sudo apt install -y zabbix-server-mysql zabbix-frontend-php zabbix-apache-conf zabbix-agent mysql-server` check mysql, php and apache versions - `sudo mysql -V` & `sudo php --version` & `sudo apache2 -V` verify the versions. next we need to configure mysql.  
+first we install Zabbix on our servers type command - `sudo apt update && sudo apt upgrade` to update our dependencies (Ubuntu) then install zabbix using command -  `wget https://repo.zabbix.com/zabbix/5.0/ubuntu/pool/main/z/zabbix-release/zabbix-release_5.0-1+focal_all.deb` then dpkg it - `dpkg -i zabbix-release_5.0-1+focal_all.deb` and `sudo apt update && sudo apt upgrade` once more now we will install Zabbix server, frontend, agent, and database. `sudo apt install -y zabbix-server-mysql zabbix-frontend-php zabbix-apache-conf zabbix-agent mysql-server` check mysql, php and apache versions - `sudo mysql -V` & `sudo php --version` & `sudo apache2 -V` verify the versions. next we need to configure mysql.  
 
 Start with `sudo mysql_secure_installation` It will ask to validate password component. for procution validate always. in this case I don't want to go with super complex password so I will type - n. next we will be asked to remove anonymous users Press y for that. then we will be asked to disable root login remotely. I will press N for that but in Production consider typing yes. then remove test database - Y. and also yes for reload table priviliges.  
 
@@ -18,7 +18,7 @@ This file has a lot of stuff we will update only one thing, however, this is the
 ![alt text](https://s3.eu-central-1.amazonaws.com/task7.boi.done.yea/Part4.PNG)  
 __after updating use following keys on your keyboard to save the file CTRL + S, CRTL + X__  
 
-Next we will configure PHP for Zabbix frontend. We will edit __/etc/zabbix/apache.conf__ file to update the timezone (`sudo nano  /etc/zabbix/apache.conf`). In my case it will be Etc/GMT-4 (Because of PHP syntax). I will type in version 7 php block. you can find your own timezone [here](https://www.php.net/manual/en/timezones.php https://www.php.net/manual/en/timezones.php)  
+Next we will configure PHP for Zabbix frontend. We will edit __/etc/zabbix/apache.conf__ file to update the timezone (`sudo nano  /etc/zabbix/apache.conf`). In my case it will be Etc/GMT-4 (Because of PHP syntax). I will type in version 7 php block. you can find your own timezone [here](https://www.php.net/manual/en/timezones.php) https://www.php.net/manual/en/timezones.php)  
 
 ![alt text](https://s3.eu-central-1.amazonaws.com/task7.boi.done.yea/Part5.PNG)  
 __after updating use following keys on your keyboard to save the file CTRL + S, CRTL + X__  

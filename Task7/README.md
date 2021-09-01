@@ -38,6 +38,7 @@ Click next. look at the options and see if everything is like you set it up (esp
 after login we can go back to all dashboars, create new dashboard. I will name my dashboard dashboard-1 and save it. Then go to sharing options and give zabbix user groups permissions as follows  
 
 ![alt text](https://s3.eu-central-1.amazonaws.com/task7.boi.done.yea/Part10.PNG)  
+![alt text](https://s3.eu-central-1.amazonaws.com/task7.boi.done.yea/Part29.PNG)
 
 For active or passive checks I will configure one active check item for my zabbix agent. on the left sidebar go to Configurations -> Hosts and choose the Items under Items column.  
 
